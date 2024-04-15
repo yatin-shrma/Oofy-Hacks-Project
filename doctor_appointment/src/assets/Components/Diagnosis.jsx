@@ -1,18 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Accordion from 'react-bootstrap/Accordion';
 
-function AlwaysOpenExample() {
+function Diagnosis(props) {
   return (
-    <Accordion defaultActiveKey={['0']} alwaysOpen>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Disease</Accordion.Header>
-        <Accordion.Body >
-          Details about the disease
-        </Accordion.Body>
-      </Accordion.Item>
-      
-    </Accordion>
+    <section className="bg-pink-600 py-20 mb-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-extrabold text-white sm:text-5xl md:text-6xl">
+            {props.title}
+          </h1>
+          <p className="my-4 text-xl text-white">
+           {props.subtitle}
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
-export default AlwaysOpenExample;
+export default Diagnosis;
